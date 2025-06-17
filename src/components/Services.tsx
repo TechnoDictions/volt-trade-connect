@@ -37,34 +37,21 @@ export const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-white relative overflow-hidden">
-      {/* Enhanced Parallax Background Elements */}
-      <div 
-        className="absolute inset-0 opacity-8"
-        style={{ transform: `translateY(${scrollY * 0.4}px) rotate(${scrollY * 0.02}deg)` }}
-      >
-        <div className="absolute top-10 left-20 w-40 h-40 border-2 border-blue-200 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-32 w-32 h-32 border-2 border-green-200 rounded-full"></div>
-        <div className="absolute top-1/2 left-10 w-20 h-20 border-2 border-yellow-200 rounded-full"></div>
-        <div className="absolute top-32 right-10 w-24 h-24 border-2 border-purple-200 rounded-full"></div>
-      </div>
-
-      {/* Additional floating elements */}
+      {/* Parallax Background Elements */}
       <div 
         className="absolute inset-0 opacity-5"
-        style={{ transform: `translateY(${scrollY * -0.3}px) translateX(${scrollY * 0.1}px)` }}
+        style={{ transform: `translateY(${scrollY * 0.2}px)` }}
       >
-        <div className="absolute top-40 left-1/3 w-16 h-16 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur-sm"></div>
-        <div className="absolute bottom-40 right-1/4 w-20 h-20 bg-gradient-to-r from-green-100 to-teal-100 rounded-full blur-sm"></div>
-        <div className="absolute top-60 right-1/2 w-12 h-12 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-full blur-sm"></div>
+        <div className="absolute top-10 left-20 w-40 h-40 border border-gray-300 rounded-full"></div>
+        <div className="absolute bottom-20 right-32 w-32 h-32 border border-gray-300 rounded-full"></div>
+        <div className="absolute top-1/2 left-10 w-20 h-20 border border-gray-300 rounded-full"></div>
+        <div className="absolute top-32 right-10 w-24 h-24 border border-gray-300 rounded-full"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div 
           className="text-center mb-16"
-          style={{ 
-            transform: `translateY(${scrollY * -0.15}px) scale(${1 + scrollY * 0.0001})`,
-            transition: 'transform 0.1s ease-out'
-          }}
+          style={{ transform: `translateY(${scrollY * -0.1}px)` }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Why Choose ElectroTrade Pro?
@@ -79,24 +66,13 @@ export const Services = () => {
             <div
               key={index}
               style={{ 
-                transform: `
-                  translateY(${scrollY * (0.08 + index * 0.03)}px) 
-                  translateX(${scrollY * (index % 2 === 0 ? 0.02 : -0.02)}px)
-                  rotate(${scrollY * (index % 2 === 0 ? 0.01 : -0.01)}deg)
-                  scale(${1 + scrollY * 0.00005})
-                `,
+                transform: `translateY(${scrollY * (0.05 + index * 0.02)}px)`,
                 transition: 'transform 0.1s ease-out'
               }}
             >
-              <Card className="border-2 hover:border-blue-200 transition-all duration-500 hover:shadow-2xl hover:scale-105 backdrop-blur-sm bg-white/90">
+              <Card className="border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="text-center">
-                  <div 
-                    className="mx-auto bg-gradient-to-r from-blue-100 to-indigo-100 p-3 rounded-full w-fit mb-4 shadow-lg"
-                    style={{ 
-                      transform: `rotate(${scrollY * (0.03 + index * 0.01)}deg)`,
-                      transition: 'transform 0.1s ease-out'
-                    }}
-                  >
+                  <div className="mx-auto bg-blue-100 p-3 rounded-full w-fit mb-4">
                     <service.icon className="h-8 w-8 text-blue-600" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -109,60 +85,18 @@ export const Services = () => {
           ))}
         </div>
 
-        {/* Enhanced Floating Service Icons with Complex Parallax */}
+        {/* Floating Service Icons with Parallax */}
         <div 
-          className="absolute top-20 right-5 opacity-15"
-          style={{ 
-            transform: `
-              translateY(${scrollY * -0.25}px) 
-              translateX(${scrollY * 0.05}px)
-              rotate(${scrollY * 0.08}deg)
-              scale(${1 + scrollY * 0.0002})
-            `,
-            transition: 'transform 0.1s ease-out'
-          }}
+          className="absolute top-20 right-5 opacity-10"
+          style={{ transform: `translateY(${scrollY * -0.15}px) rotate(${scrollY * 0.05}deg)` }}
         >
-          <Truck className="h-24 w-24 text-blue-400 drop-shadow-lg" />
+          <Truck className="h-20 w-20 text-blue-400" />
         </div>
         <div 
-          className="absolute bottom-32 left-5 opacity-15"
-          style={{ 
-            transform: `
-              translateY(${scrollY * -0.35}px) 
-              translateX(${scrollY * -0.03}px)
-              rotate(${scrollY * -0.06}deg)
-              scale(${1 + scrollY * 0.0001})
-            `,
-            transition: 'transform 0.1s ease-out'
-          }}
+          className="absolute bottom-32 left-5 opacity-10"
+          style={{ transform: `translateY(${scrollY * -0.25}px) rotate(${scrollY * -0.05}deg)` }}
         >
-          <Shield className="h-20 w-20 text-green-400 drop-shadow-lg" />
-        </div>
-        <div 
-          className="absolute top-1/2 right-1/4 opacity-10"
-          style={{ 
-            transform: `
-              translateY(${scrollY * 0.2}px) 
-              translateX(${scrollY * 0.08}px)
-              rotate(${scrollY * 0.04}deg)
-            `,
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-          <Headphones className="h-18 w-18 text-purple-400 drop-shadow-lg" />
-        </div>
-        <div 
-          className="absolute bottom-1/4 right-1/3 opacity-12"
-          style={{ 
-            transform: `
-              translateY(${scrollY * -0.18}px) 
-              translateX(${scrollY * -0.06}px)
-              rotate(${scrollY * -0.03}deg)
-            `,
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-          <Clock className="h-16 w-16 text-orange-400 drop-shadow-lg" />
+          <Shield className="h-16 w-16 text-green-400" />
         </div>
       </div>
     </section>
